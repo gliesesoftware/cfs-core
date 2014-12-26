@@ -1,7 +1,7 @@
 Package.describe({
   git: 'https://github.com/gliesesoftware/cfs-core.git',
   name: 'gliese:cfs-core',
-  version: '0.5.4',
+  version: '0.5.5',
   summary: 'Gliese flavour of CollectionFS (INTERNAL USE ONLY)'
 });
 
@@ -21,7 +21,7 @@ Package.onUse(function(api) {
     // Add the option to have ddp and http access point
     'gliese:cfs-access-point@0.1.44',
     // We might also want to have the server create copies of our files?
-    'cfs:worker@0.1.5',
+    'gliese:cfs-worker@0.1.5',
     // By default we want to support uploads over HTTP
     'cfs:upload-http@0.0.19',
   ]);
