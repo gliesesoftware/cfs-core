@@ -1,7 +1,7 @@
 Package.describe({
   git: 'https://github.com/gliesesoftware/cfs-core.git',
   name: 'gliese:cfs-core',
-  version: '0.5.5',
+  version: '0.5.6',
   summary: 'Gliese flavour of CollectionFS (INTERNAL USE ONLY)'
 });
 
@@ -23,7 +23,7 @@ Package.onUse(function(api) {
     // We might also want to have the server create copies of our files?
     'gliese:cfs-worker@0.1.5',
     // By default we want to support uploads over HTTP
-    'gliese:upload-http@0.0.20',
+    'gliese:cfs-upload-http@0.0.20',
   ]);
 
 });
