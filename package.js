@@ -1,8 +1,8 @@
 Package.describe({
-  git: 'https://github.com/CollectionFS/Meteor-CollectionFS.git',
-  name: 'cfs:standard-packages',
-  version: '0.5.3',
-  summary: 'Filesystem for Meteor, collectionFS'
+  git: 'https://github.com/gliesesoftware/cfs-core.git',
+  name: 'gliese:cfs-core',
+  version: '0.5.4',
+  summary: 'Gliese flavour of CollectionFS (INTERNAL USE ONLY)'
 });
 
 Package.onUse(function(api) {
@@ -11,17 +11,17 @@ Package.onUse(function(api) {
   // Rig the collectionFS package v2
   api.imply([
     // Base util rigs the basis for the FS scope and some general helper mehtods
-    'cfs:base-package@0.0.27',
+    'gliese:cfs-base@0.0.28',
     // Want to make use of the file object and its api, yes!
-    'cfs:file@0.1.15',
+    'gliese:cfs-file@0.1.16',
     // Add the FS.Collection to keep track of everything
-    'cfs:collection@0.5.3',
+    'gliese:cfs-collection@0.5.4',
     // Support filters for easy rules about what may be inserted
-    'cfs:collection-filters@0.2.3',
+    'gliese:cfs-collection-filters@0.2.3',
     // Add the option to have ddp and http access point
-    'cfs:access-point@0.1.43',
+    'gliese:cfs-access-point@0.1.44',
     // We might also want to have the server create copies of our files?
-    'cfs:worker@0.1.3',
+    'cfs:worker@0.1.5',
     // By default we want to support uploads over HTTP
     'cfs:upload-http@0.0.19',
   ]);
@@ -29,7 +29,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function (api) {
-  api.use('cfs:standard-packages');
+  api.use('gliese:cfs-core');
   api.use('test-helpers@1.0.0', 'server');
   api.use([
     'tinytest@1.0.0',
